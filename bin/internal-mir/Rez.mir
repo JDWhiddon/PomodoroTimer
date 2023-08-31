@@ -1,0 +1,200 @@
+[ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\bin\gen\006-B2656-00\source\Rez.mcgen"; @line = 1; ]
+import Toybox.Lang;
+[ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\bin\gen\006-B2656-00\source\Rez.mcgen"; @line = 2; ]
+using Toybox.WatchUi;
+[ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\bin\gen\006-B2656-00\source\Rez.mcgen"; @line = 3; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\bin\gen\006-B2656-00\source\Rez.mcgen"; @line = 4; ]
+using Toybox.Graphics;
+[ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\bin\gen\006-B2656-00\source\Rez.mcgen"; @line = 5; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\bin\gen\006-B2656-00\source\Rez.mcgen"; @line = 7; ]
+module Rez {
+    [ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\bin\gen\006-B2656-00\source\Rez.mcgen"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\bin\gen\006-B2656-00\source\Rez.mcgen"; @line = 8; ]
+    module Drawables {
+        [ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\bin\gen\006-B2656-00\source\Rez.mcgen"; @line = 8; ]
+        <init> {
+        }
+        [ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\bin\gen\006-B2656-00\source\Rez.mcgen"; @line = 9; @position = 27; initialized = true; ]
+        var LauncherIcon as Symbol;
+    }
+    [ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\bin\gen\006-B2656-00\source\Rez.mcgen"; @line = 12; ]
+    module Fonts {
+        [ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\bin\gen\006-B2656-00\source\Rez.mcgen"; @line = 12; ]
+        <init> {
+        }
+    }
+    [ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\bin\gen\006-B2656-00\source\Rez.mcgen"; @line = 15; ]
+    module JsonData {
+        [ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\bin\gen\006-B2656-00\source\Rez.mcgen"; @line = 15; ]
+        <init> {
+        }
+    }
+    [ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\bin\gen\006-B2656-00\source\Rez.mcgen"; @line = 18; ]
+    module Layouts {
+        [ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\bin\gen\006-B2656-00\source\Rez.mcgen"; @line = 18; ]
+        <init> {
+        }
+        [ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\bin\gen\006-B2656-00\source\Rez.mcgen"; @line = 19; ]
+        function MainLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+C_Users_JD_Documents_GarminApps_PomodoroTimer_bin_gen_006_B2656_00_source_Rez_mcgen_19_74_start:
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\bin\gen\006-B2656-00\source\Rez.mcgen" 20 12 ]
+            [ "C_Users_JD_Documents_GarminApps_PomodoroTimer_bin_gen_006_B2656_00_source_Rez_mcgen_19_74_start" "C_Users_JD_Documents_GarminApps_PomodoroTimer_bin_gen_006_B2656_00_source_Rez_mcgen_19_74_stop" ]
+            %rez_cmp_local_text_type_title.1 = local;
+            %tmp.3 = getm $.Toybox.WatchUi;
+            %tmp.4 = getv function ? %tmp.3 :Text;
+            %tmp.5 = newd 6;
+            %tmp.7 = const :identifier;
+            %tmp.8 = "type_title";
+            %tmp.9 = dup %tmp.5;
+            %tmp.10 = aputv %tmp.9 %tmp.7 %tmp.8;
+            %tmp.12 = const :locX;
+            %tmp.13 = 240;
+            %tmp.14 = 0.5;
+            %tmp.15 = mul %tmp.13 %tmp.14;
+            %tmp.16 = dup %tmp.10;
+            %tmp.17 = aputv %tmp.16 %tmp.12 %tmp.15;
+            %tmp.19 = const :locY;
+            %tmp.20 = 240;
+            %tmp.21 = 20;
+            %tmp.22 = 100.0;
+            %tmp.23 = div %tmp.21 %tmp.22;
+            %tmp.24 = mul %tmp.20 %tmp.23;
+            %tmp.25 = dup %tmp.17;
+            %tmp.26 = aputv %tmp.25 %tmp.19 %tmp.24;
+            %tmp.28 = const :text;
+            %tmp.29 = "BEGIN";
+            %tmp.30 = dup %tmp.26;
+            %tmp.31 = aputv %tmp.30 %tmp.28 %tmp.29;
+            %tmp.33 = const :justification;
+            %tmp.34 = getm $.Toybox.Graphics;
+            %tmp.35 = getv %tmp.34 :TEXT_JUSTIFY_CENTER;
+            %tmp.36 = dup %tmp.31;
+            %tmp.37 = aputv %tmp.36 %tmp.33 %tmp.35;
+            %tmp.39 = const :font;
+            %tmp.40 = getm $.Toybox.Graphics;
+            %tmp.41 = getv %tmp.40 :FONT_MEDIUM;
+            %tmp.42 = dup %tmp.37;
+            %tmp.43 = aputv %tmp.42 %tmp.39 %tmp.41;
+            %tmp.1 = newc %tmp.4 (%tmp.43);
+            lputv %rez_cmp_local_text_type_title.1 %tmp.1;
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\bin\gen\006-B2656-00\source\Rez.mcgen" 22 12 ]
+            [ "C_Users_JD_Documents_GarminApps_PomodoroTimer_bin_gen_006_B2656_00_source_Rez_mcgen_19_74_start" "C_Users_JD_Documents_GarminApps_PomodoroTimer_bin_gen_006_B2656_00_source_Rez_mcgen_19_74_stop" ]
+            %rez_cmp_local_text_current_timer.2 = local;
+            %tmp.46 = getm $.Toybox.WatchUi;
+            %tmp.47 = getv function ? %tmp.46 :Text;
+            %tmp.48 = newd 6;
+            %tmp.50 = const :identifier;
+            %tmp.51 = "current_timer";
+            %tmp.52 = dup %tmp.48;
+            %tmp.53 = aputv %tmp.52 %tmp.50 %tmp.51;
+            %tmp.55 = const :locX;
+            %tmp.56 = 240;
+            %tmp.57 = 0.5;
+            %tmp.58 = mul %tmp.56 %tmp.57;
+            %tmp.59 = dup %tmp.53;
+            %tmp.60 = aputv %tmp.59 %tmp.55 %tmp.58;
+            %tmp.62 = const :locY;
+            %tmp.63 = 240;
+            %tmp.64 = lgetv %dc;
+            %tmp.65 = getv function %tmp.64 :getFontHeight;
+            %tmp.66 = getm $.Toybox.Graphics;
+            %tmp.67 = getv %tmp.66 :FONT_NUMBER_THAI_HOT;
+            %tmp.68 = invoke %tmp.64 %tmp.65(%tmp.67);
+            %tmp.69 = sub %tmp.63 %tmp.68;
+            %tmp.70 = 0.5;
+            %tmp.71 = mul %tmp.69 %tmp.70;
+            %tmp.72 = dup %tmp.60;
+            %tmp.73 = aputv %tmp.72 %tmp.62 %tmp.71;
+            %tmp.75 = const :text;
+            %tmp.76 = "25:00";
+            %tmp.77 = dup %tmp.73;
+            %tmp.78 = aputv %tmp.77 %tmp.75 %tmp.76;
+            %tmp.80 = const :justification;
+            %tmp.81 = getm $.Toybox.Graphics;
+            %tmp.82 = getv %tmp.81 :TEXT_JUSTIFY_CENTER;
+            %tmp.83 = dup %tmp.78;
+            %tmp.84 = aputv %tmp.83 %tmp.80 %tmp.82;
+            %tmp.86 = const :font;
+            %tmp.87 = getm $.Toybox.Graphics;
+            %tmp.88 = getv %tmp.87 :FONT_NUMBER_THAI_HOT;
+            %tmp.89 = dup %tmp.84;
+            %tmp.90 = aputv %tmp.89 %tmp.86 %tmp.88;
+            %tmp.44 = newc %tmp.47 (%tmp.90);
+            lputv %rez_cmp_local_text_current_timer.2 %tmp.44;
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\bin\gen\006-B2656-00\source\Rez.mcgen" 24 12 ]
+            [ "C_Users_JD_Documents_GarminApps_PomodoroTimer_bin_gen_006_B2656_00_source_Rez_mcgen_19_74_start" "C_Users_JD_Documents_GarminApps_PomodoroTimer_bin_gen_006_B2656_00_source_Rez_mcgen_19_74_stop" ]
+            %rez_cmp_local_text_cycles_done.3 = local;
+            %tmp.93 = getm $.Toybox.WatchUi;
+            %tmp.94 = getv function ? %tmp.93 :Text;
+            %tmp.95 = newd 6;
+            %tmp.97 = const :identifier;
+            %tmp.98 = "cycles_done";
+            %tmp.99 = dup %tmp.95;
+            %tmp.100 = aputv %tmp.99 %tmp.97 %tmp.98;
+            %tmp.102 = const :locX;
+            %tmp.103 = 240;
+            %tmp.104 = 0.5;
+            %tmp.105 = mul %tmp.103 %tmp.104;
+            %tmp.106 = dup %tmp.100;
+            %tmp.107 = aputv %tmp.106 %tmp.102 %tmp.105;
+            %tmp.109 = const :locY;
+            %tmp.110 = 240;
+            %tmp.111 = 70;
+            %tmp.112 = 100.0;
+            %tmp.113 = div %tmp.111 %tmp.112;
+            %tmp.114 = mul %tmp.110 %tmp.113;
+            %tmp.115 = dup %tmp.107;
+            %tmp.116 = aputv %tmp.115 %tmp.109 %tmp.114;
+            %tmp.118 = const :text;
+            %tmp.119 = "1st cycle";
+            %tmp.120 = dup %tmp.116;
+            %tmp.121 = aputv %tmp.120 %tmp.118 %tmp.119;
+            %tmp.123 = const :justification;
+            %tmp.124 = getm $.Toybox.Graphics;
+            %tmp.125 = getv %tmp.124 :TEXT_JUSTIFY_CENTER;
+            %tmp.126 = dup %tmp.121;
+            %tmp.127 = aputv %tmp.126 %tmp.123 %tmp.125;
+            %tmp.129 = const :font;
+            %tmp.130 = getm $.Toybox.Graphics;
+            %tmp.131 = getv %tmp.130 :FONT_SMALL;
+            %tmp.132 = dup %tmp.127;
+            %tmp.133 = aputv %tmp.132 %tmp.129 %tmp.131;
+            %tmp.91 = newc %tmp.94 (%tmp.133);
+            lputv %rez_cmp_local_text_cycles_done.3 %tmp.91;
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\bin\gen\006-B2656-00\source\Rez.mcgen" 26 12 ]
+            %tmp.134 = newa Array<WatchUi.Drawable> 3;
+            %tmp.136 = lgetv %rez_cmp_local_text_type_title.1;
+            %tmp.137 = dup %tmp.134;
+            %tmp.138 = aputv %tmp.137 0 %tmp.136;
+            %tmp.140 = lgetv %rez_cmp_local_text_current_timer.2;
+            %tmp.141 = dup %tmp.138;
+            %tmp.142 = aputv %tmp.141 1 %tmp.140;
+            %tmp.144 = lgetv %rez_cmp_local_text_cycles_done.3;
+            %tmp.145 = dup %tmp.142;
+            %tmp.146 = aputv %tmp.145 2 %tmp.144;
+            ret %tmp.146;
+C_Users_JD_Documents_GarminApps_PomodoroTimer_bin_gen_006_B2656_00_source_Rez_mcgen_19_74_stop:
+        }
+    }
+    [ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\bin\gen\006-B2656-00\source\Rez.mcgen"; @line = 30; ]
+    module Menus {
+        [ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\bin\gen\006-B2656-00\source\Rez.mcgen"; @line = 30; ]
+        <init> {
+        }
+    }
+    [ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\bin\gen\006-B2656-00\source\Rez.mcgen"; @line = 33; ]
+    module Strings {
+        [ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\bin\gen\006-B2656-00\source\Rez.mcgen"; @line = 33; ]
+        <init> {
+        }
+        [ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\bin\gen\006-B2656-00\source\Rez.mcgen"; @line = 34; @position = 27; initialized = true; ]
+        var AppName as Symbol;
+    }
+}
+[ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\bin\gen\006-B2656-00\source\Rez.mcgen"; @line = 1; ]
+<init> {
+}

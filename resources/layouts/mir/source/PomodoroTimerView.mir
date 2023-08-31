@@ -1,0 +1,398 @@
+[ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc"; @line = 1; ]
+import Toybox.Graphics;
+[ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc"; @line = 2; ]
+import Toybox.WatchUi;
+[ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc"; @line = 3; ]
+using Toybox.Lang;
+[ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc"; @line = 5; ]
+class PomodoroTimerView extends WatchUi.View{
+    [ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc"; @line = 6; @position = 16; ]
+    private
+    var _typeTitleElement;
+    [ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc"; @line = 7; @position = 16; ]
+    private
+    var _currentTimerElement;
+    [ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc"; @line = 8; @position = 16; ]
+    private
+    var _cyclesDoneElement;
+    [ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc"; @line = 10; ]
+    function initialize() as Void {
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_10_26_start:
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 11 8 ]
+        %tmp.2 = getv ? :View;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_10_26_stop:
+    }
+    [ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc"; @line = 15; ]
+    function onLayout(dc as Dc) as Void {
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_15_40_start:
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 16 8 ]
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :setLayout;
+        %tmp.4 = getv ? :Rez;
+        %tmp.5 = getv %tmp.4 :Layouts;
+        %tmp.6 = getv function %tmp.5 :MainLayout;
+        %tmp.8 = lgetv %dc;
+        %tmp.9 = invoke %tmp.5 %tmp.6(%tmp.8);
+        invoke %tmp.1 %tmp.2(%tmp.9);
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 18 8 ]
+        %tmp.10 = self;
+        %tmp.11 = getv function %tmp.10 :findDrawableById;
+        %tmp.12 = "type_title";
+        %tmp.13 = invoke %tmp.10 %tmp.11(%tmp.12);
+        putv self :_typeTitleElement %tmp.13;
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 19 8 ]
+        %tmp.14 = self;
+        %tmp.15 = getv function %tmp.14 :findDrawableById;
+        %tmp.16 = "current_timer";
+        %tmp.17 = invoke %tmp.14 %tmp.15(%tmp.16);
+        putv self :_currentTimerElement %tmp.17;
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 20 8 ]
+        %tmp.18 = self;
+        %tmp.19 = getv function %tmp.18 :findDrawableById;
+        %tmp.20 = "cycles_done";
+        %tmp.21 = invoke %tmp.18 %tmp.19(%tmp.20);
+        putv self :_cyclesDoneElement %tmp.21;
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_15_40_stop:
+    }
+    [ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc"; @line = 26; ]
+    function onShow() as Void {
+    }
+    [ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc"; @line = 30; ]
+    function onUpdate(dc as Dc) as Void {
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_30_40_start:
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 32 8 ]
+        %tmp.2 = getv ? :View;
+        %tmp.3 = getv function %tmp.2 :onUpdate;
+        %tmp.5 = lgetv %dc;
+        invoke %tmp.2 %tmp.3(%tmp.5);
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_30_40_stop:
+    }
+    [ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc"; @line = 38; ]
+    function onHide() as Void {
+    }
+    [ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc"; @line = 41; ]
+    function setCycleType(cycleType as Lang.Number) as Void {
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_41_60_start:
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 42 8 ]
+        [ "C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_41_60_start" "C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_41_60_stop" ]
+        %label.1 = local;
+        %tmp.1 = "";
+        lputv %label.1 %tmp.1;
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 43 8 ]
+        [ "C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_41_60_start" "C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_41_60_stop" ]
+        %color.2 = local;
+        %tmp.2 = getm $.Toybox.Graphics;
+        %tmp.3 = getv %tmp.2 :COLOR_WHITE;
+        lputv %color.2 %tmp.3;
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 44 8 ]
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_44_8_if_stmt:
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_44_12_begin:
+        %tmp.5 = lgetv %cycleType;
+        %tmp.6 = 0;
+        %tmp.7 = ne %tmp.5 %tmp.6;
+        %tmp.8 = dup %tmp.7;
+        bf %tmp.8 @C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_44_30_end;
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_44_30_true:
+        %tmp.10 = lgetv %cycleType;
+        %tmp.11 = 8;
+        %tmp.12 = mod %tmp.10 %tmp.11;
+        %tmp.13 = 0;
+        %tmp.14 = eq %tmp.12 %tmp.13;
+        %tmp.15 = and %tmp.7 %tmp.14;
+        push %tmp.15;
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_44_30_end:
+        %tmp.16 = phi [%tmp.8 @C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_44_12_begin] [%tmp.15 @C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_44_30_true] [%tmp.16 @C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_44_30_end];
+        bf %tmp.16 @C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_44_8_if_false;
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_44_8_if_true:
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_44_50_start:
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 45 12 ]
+        %tmp.17 = "LONG REST";
+        lputv %label.1 %tmp.17;
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 46 12 ]
+        %tmp.18 = getm $.Toybox.Graphics;
+        %tmp.19 = getv %tmp.18 :COLOR_GREEN;
+        lputv %color.2 %tmp.19;
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_44_50_stop:
+        goto @C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_44_8_if_end;
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_44_8_if_false:
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 48 13 ]
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_48_13_if_stmt:
+        %tmp.21 = lgetv %cycleType;
+        %tmp.22 = 2;
+        %tmp.23 = mod %tmp.21 %tmp.22;
+        %tmp.24 = 0;
+        %tmp.25 = eq %tmp.23 %tmp.24;
+        bf %tmp.25 @C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_48_13_if_false;
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_48_13_if_true:
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_48_37_start:
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 49 12 ]
+        %tmp.26 = "REST";
+        lputv %label.1 %tmp.26;
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 50 12 ]
+        %tmp.27 = getm $.Toybox.Graphics;
+        %tmp.28 = getv %tmp.27 :COLOR_GREEN;
+        lputv %color.2 %tmp.28;
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_48_37_stop:
+        goto @C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_48_13_if_end;
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_48_13_if_false:
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_52_13_start:
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 53 12 ]
+        %tmp.29 = "FOCUS";
+        lputv %label.1 %tmp.29;
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 54 12 ]
+        %tmp.30 = getm $.Toybox.Graphics;
+        %tmp.31 = getv %tmp.30 :COLOR_ORANGE;
+        lputv %color.2 %tmp.31;
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_52_13_stop:
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_48_13_if_end:
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_44_8_if_end:
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 57 8 ]
+        %tmp.33 = getv ? :_typeTitleElement;
+        %tmp.34 = getv function %tmp.33 :setText;
+        %tmp.36 = lgetv %label.1;
+        invoke %tmp.33 %tmp.34(%tmp.36);
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 58 8 ]
+        %tmp.38 = getv ? :_typeTitleElement;
+        %tmp.39 = getv function %tmp.38 :setColor;
+        %tmp.41 = lgetv %color.2;
+        invoke %tmp.38 %tmp.39(%tmp.41);
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 60 8 ]
+        %tmp.42 = getm $.Toybox.WatchUi;
+        %tmp.43 = getv function %tmp.42 :requestUpdate;
+        invoke %tmp.42 %tmp.43();
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_41_60_stop:
+    }
+    [ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc"; @line = 63; ]
+    function setTimerValue(value as Lang.Number) as Void {
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_63_57_start:
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 64 8 ]
+        [ "C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_63_57_start" "C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_63_57_stop" ]
+        %minutes.1 = local;
+        %tmp.2 = lgetv %value;
+        %tmp.3 = 60;
+        %tmp.4 = div %tmp.2 %tmp.3;
+        lputv %minutes.1 %tmp.4;
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 65 8 ]
+        [ "C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_63_57_start" "C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_63_57_stop" ]
+        %seconds.2 = local;
+        %tmp.6 = lgetv %value;
+        %tmp.7 = 60;
+        %tmp.8 = mod %tmp.6 %tmp.7;
+        lputv %seconds.2 %tmp.8;
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 66 8 ]
+        [ "C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_63_57_start" "C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_63_57_stop" ]
+        %secondsFormatted.3 = local;
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_66_31_begin:
+        %tmp.10 = lgetv %seconds.2;
+        %tmp.11 = 9;
+        %tmp.12 = gt %tmp.10 %tmp.11;
+        bf %tmp.12 @C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_66_31_false;
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_66_31_true:
+        %tmp.13 = lgetv %seconds.2;
+        %tmp.14 = getv function %tmp.13 :toString;
+        %tmp.15 = invoke %tmp.13 %tmp.14();
+        push %tmp.15;
+        goto @C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_66_31_end;
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_66_31_false:
+        %tmp.16 = "0";
+        %tmp.17 = lgetv %seconds.2;
+        %tmp.18 = getv function %tmp.17 :toString;
+        %tmp.19 = invoke %tmp.17 %tmp.18();
+        %tmp.20 = add %tmp.16 %tmp.19;
+        push %tmp.20;
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_66_31_end:
+        %tmp.21 = phi [%tmp.12 @C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_66_31_begin] [%tmp.15 @C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_66_31_true] [%tmp.20 @C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_66_31_false] [%tmp.21 @C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_66_31_end];
+        lputv %secondsFormatted.3 %tmp.21;
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 68 8 ]
+        [ "C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_63_57_start" "C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_63_57_stop" ]
+        %formattedValue.4 = local;
+        %tmp.22 = lgetv %minutes.1;
+        %tmp.23 = getv function %tmp.22 :toString;
+        %tmp.24 = invoke %tmp.22 %tmp.23();
+        %tmp.25 = ":";
+        %tmp.26 = add %tmp.24 %tmp.25;
+        %tmp.28 = lgetv %secondsFormatted.3;
+        %tmp.29 = add %tmp.26 %tmp.28;
+        lputv %formattedValue.4 %tmp.29;
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 70 8 ]
+        %tmp.31 = getv ? :_currentTimerElement;
+        %tmp.32 = getv function %tmp.31 :setText;
+        %tmp.34 = lgetv %formattedValue.4;
+        invoke %tmp.31 %tmp.32(%tmp.34);
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 72 8 ]
+        %tmp.35 = getm $.Toybox.WatchUi;
+        %tmp.36 = getv function %tmp.35 :requestUpdate;
+        invoke %tmp.35 %tmp.36();
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_63_57_stop:
+    }
+    [ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc"; @line = 75; ]
+    function updateCyclesValue(cycles as Lang.Number) as Void {
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_75_62_start:
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 76 8 ]
+        %tmp.2 = lgetv %cycles;
+        %tmp.3 = 1;
+        %tmp.4 = add %tmp.2 %tmp.3;
+        %tmp.5 = 2;
+        %tmp.6 = div %tmp.4 %tmp.5;
+        lputv %cycles %tmp.6;
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 77 8 ]
+        [ "C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_75_62_start" "C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_75_62_stop" ]
+        %ordinalSign.1 = local;
+        %tmp.7 = "";
+        lputv %ordinalSign.1 %tmp.7;
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 78 8 ]
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_78_8_if_stmt:
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_78_12_begin:
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_78_12_begin:
+        %tmp.9 = lgetv %cycles;
+        %tmp.10 = 100;
+        %tmp.11 = mod %tmp.9 %tmp.10;
+        %tmp.12 = 11;
+        %tmp.13 = ne %tmp.11 %tmp.12;
+        %tmp.14 = dup %tmp.13;
+        bf %tmp.14 @C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_78_34_end;
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_78_34_true:
+        %tmp.16 = lgetv %cycles;
+        %tmp.17 = 100;
+        %tmp.18 = mod %tmp.16 %tmp.17;
+        %tmp.19 = 12;
+        %tmp.20 = ne %tmp.18 %tmp.19;
+        %tmp.21 = and %tmp.13 %tmp.20;
+        push %tmp.21;
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_78_34_end:
+        %tmp.22 = phi [%tmp.14 @C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_78_12_begin] [%tmp.21 @C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_78_34_true] [%tmp.22 @C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_78_34_end];
+        %tmp.23 = dup %tmp.22;
+        bf %tmp.23 @C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_78_56_end;
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_78_56_true:
+        %tmp.25 = lgetv %cycles;
+        %tmp.26 = 100;
+        %tmp.27 = mod %tmp.25 %tmp.26;
+        %tmp.28 = 13;
+        %tmp.29 = ne %tmp.27 %tmp.28;
+        %tmp.30 = and %tmp.22 %tmp.29;
+        push %tmp.30;
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_78_56_end:
+        %tmp.31 = phi [%tmp.23 @C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_78_12_begin] [%tmp.30 @C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_78_56_true] [%tmp.31 @C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_78_56_end];
+        bf %tmp.31 @C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_78_8_if_false;
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_78_8_if_true:
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_78_76_start:
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 79 12 ]
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_79_12_if_stmt:
+        %tmp.33 = lgetv %cycles;
+        %tmp.34 = 10;
+        %tmp.35 = mod %tmp.33 %tmp.34;
+        %tmp.36 = 1;
+        %tmp.37 = eq %tmp.35 %tmp.36;
+        bf %tmp.37 @C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_79_12_if_false;
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_79_12_if_true:
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_79_36_start:
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 80 16 ]
+        %tmp.38 = "st";
+        lputv %ordinalSign.1 %tmp.38;
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_79_36_stop:
+        goto @C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_79_12_if_end;
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_79_12_if_false:
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 82 17 ]
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_82_17_if_stmt:
+        %tmp.40 = lgetv %cycles;
+        %tmp.41 = 10;
+        %tmp.42 = mod %tmp.40 %tmp.41;
+        %tmp.43 = 2;
+        %tmp.44 = eq %tmp.42 %tmp.43;
+        bf %tmp.44 @C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_82_17_if_false;
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_82_17_if_true:
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_82_41_start:
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 83 16 ]
+        %tmp.45 = "nd";
+        lputv %ordinalSign.1 %tmp.45;
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_82_41_stop:
+        goto @C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_82_17_if_end;
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_82_17_if_false:
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 85 17 ]
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_85_17_if_stmt:
+        %tmp.47 = lgetv %cycles;
+        %tmp.48 = 10;
+        %tmp.49 = mod %tmp.47 %tmp.48;
+        %tmp.50 = 3;
+        %tmp.51 = eq %tmp.49 %tmp.50;
+        bf %tmp.51 @C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_85_17_if_false;
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_85_17_if_true:
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_85_41_start:
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 86 16 ]
+        %tmp.52 = "rd";
+        lputv %ordinalSign.1 %tmp.52;
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_85_41_stop:
+        goto @C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_85_17_if_end;
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_85_17_if_false:
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_88_17_start:
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 89 16 ]
+        %tmp.53 = "th";
+        lputv %ordinalSign.1 %tmp.53;
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_88_17_stop:
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_85_17_if_end:
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_82_17_if_end:
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_79_12_if_end:
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_78_76_stop:
+        goto @C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_78_8_if_end;
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_78_8_if_false:
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_93_13_start:
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 94 12 ]
+        %tmp.54 = "th";
+        lputv %ordinalSign.1 %tmp.54;
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_93_13_stop:
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_78_8_if_end:
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 97 8 ]
+        [ "C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_75_62_start" "C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_75_62_stop" ]
+        %formattedValue.2 = local;
+        %tmp.55 = lgetv %cycles;
+        %tmp.56 = getv function %tmp.55 :toString;
+        %tmp.57 = invoke %tmp.55 %tmp.56();
+        %tmp.59 = lgetv %ordinalSign.1;
+        %tmp.60 = add %tmp.57 %tmp.59;
+        %tmp.61 = " cycle";
+        %tmp.62 = add %tmp.60 %tmp.61;
+        lputv %formattedValue.2 %tmp.62;
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 99 8 ]
+        %tmp.64 = getv ? :_cyclesDoneElement;
+        %tmp.65 = getv function %tmp.64 :setText;
+        %tmp.67 = lgetv %formattedValue.2;
+        invoke %tmp.64 %tmp.65(%tmp.67);
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 101 8 ]
+        %tmp.68 = getm $.Toybox.WatchUi;
+        %tmp.69 = getv function %tmp.68 :requestUpdate;
+        invoke %tmp.68 %tmp.69();
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_75_62_stop:
+    }
+    [ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc"; @line = 104; ]
+    function switchCycleType() as Void {
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_104_39_start:
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 105 8 ]
+        %tmp.2 = getv ? :_typeTitleElement;
+        %tmp.3 = getv function %tmp.2 :setText;
+        %tmp.4 = "SWITCH";
+        invoke %tmp.2 %tmp.3(%tmp.4);
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 106 8 ]
+        %tmp.6 = getv ? :_typeTitleElement;
+        %tmp.7 = getv function %tmp.6 :setColor;
+        %tmp.8 = getm $.Toybox.Graphics;
+        %tmp.9 = getv %tmp.8 :COLOR_WHITE;
+        invoke %tmp.6 %tmp.7(%tmp.9);
+[ "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc" 107 8 ]
+        %tmp.10 = getm $.Toybox.WatchUi;
+        %tmp.11 = getv function %tmp.10 :requestUpdate;
+        invoke %tmp.10 %tmp.11();
+C_Users_JD_Documents_GarminApps_PomodoroTimer_source_PomodoroTimerView_mc_104_39_stop:
+    }
+}
+[ @file = "C:\Users\JD\Documents\GarminApps\PomodoroTimer\source\PomodoroTimerView.mc"; @line = 1; ]
+<init> {
+}

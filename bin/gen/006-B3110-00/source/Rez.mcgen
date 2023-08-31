@@ -1,0 +1,36 @@
+import Toybox.Lang;
+using Toybox.WatchUi;
+using Toybox.WatchUi as Ui;
+using Toybox.Graphics;
+using Toybox.Graphics as Gfx;
+
+module Rez {
+    module Drawables {
+        (:initialized) var LauncherIcon as Symbol;
+    } // Drawables
+
+    module Fonts {
+    } // Fonts
+
+    module JsonData {
+    } // JsonData
+
+    module Layouts {
+        function MainLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+            var rez_cmp_local_text_type_title = new WatchUi.Text({:identifier=>"type_title", :locX=>(240 * 0.5), :locY=>(240 * (20 / 100.0)), :text=>"COLD", :justification=>Gfx.TEXT_JUSTIFY_CENTER, :font=>Gfx.FONT_MEDIUM});
+
+            var rez_cmp_local_text_current_timer = new WatchUi.Text({:identifier=>"current_timer", :locX=>(240 * 0.5), :locY=>((240 - dc.getFontHeight(Gfx.FONT_NUMBER_THAI_HOT)) * 0.5), :text=>"0:30", :justification=>Gfx.TEXT_JUSTIFY_CENTER, :font=>Gfx.FONT_NUMBER_THAI_HOT});
+
+            var rez_cmp_local_text_cycles_left = new WatchUi.Text({:identifier=>"cycles_left", :locX=>(240 * 0.5), :locY=>(240 * (70 / 100.0)), :text=>"5 cycles left", :justification=>Gfx.TEXT_JUSTIFY_CENTER, :font=>Gfx.FONT_SMALL});
+
+            return [rez_cmp_local_text_type_title, rez_cmp_local_text_current_timer, rez_cmp_local_text_cycles_left] as Array<WatchUi.Drawable>;
+        }
+    } // Layouts
+
+    module Menus {
+    } // Menus
+
+    module Strings {
+        (:initialized) var AppName as Symbol;
+    } // Strings
+} // Rez
